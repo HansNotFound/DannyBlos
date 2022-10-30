@@ -3,10 +3,10 @@
 ## Kelompok DannyBlos - Game Development IF-903
 
 ### Team Member : 
-1119010 - Nealson William\n
-1119016 - DEvan Lubianto\n
-1119036 - Hans Patrick Eko Prasetyo\n
-1119045 - Rafael Christo Garcia\n
+1119010 - Nealson William\
+1119016 - DEvan Lubianto\
+1119036 - Hans Patrick Eko Prasetyo\
+1119045 - Rafael Christo Garcia\
 1119050 - Hilbert Hasiholan Purba
 
 ## About DannyBlos : 
