@@ -4,7 +4,7 @@
 
 ### Team Member : 
 1119010 - Nealson William\
-1119016 - DEvan Lubianto\
+1119016 - Devan Lubianto\
 1119036 - Hans Patrick Eko Prasetyo\
 1119045 - Rafael Christo Garcia\
 1119050 - Hilbert Hasiholan Purba
