@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public GameObject rootCanvas;
+    public GameObject gameOverScreen;
 
     public int world { get; private set; }
     public int stage { get; private set; }
@@ -17,6 +20,7 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(rootCanvas);
         }
     }
 
@@ -30,23 +34,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-
         NewGame();
     }
 
     public void NewGame()
     {
+        gameOverScreen.gameObject.SetActive(false);
+
         lives = 3;
         coins = 0;
 
         LoadLevel(1, 1);
+        
     }
 
     public void GameOver()
     {
-        // TODO: show game over screen
-
-        NewGame();
+        gameOverScreen.gameObject.SetActive(true);
+        //NewGame();
     }
 
     public void LoadLevel(int world, int stage)
