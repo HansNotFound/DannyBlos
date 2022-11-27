@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
+    public GameObject menuScreen;
     public GameObject audioManager;
 
     public int world { get; private set; }
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int coins { get; private set; }
 
+    public TMP_Text coinsScore;
+    public GameObject coinCanvas;
     public int health;
     public int numOfHearts;
 
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(coinCanvas);
             DontDestroyOnLoad(rootCanvas);
         }
     }
@@ -46,10 +50,18 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         NewGame();
+        coinsScore.text = coins.ToString();
+        MenuScreen();
+    }
+
+    public void MenuScreen() 
+    {
+        menuScreen.gameObject.SetActive(true);
     }
 
     public void NewGame()
     {
+        menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
 
         coins = 0;
@@ -96,13 +108,14 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
-		AudioManager.PlaySound(AudioManager.main.coin, 1);
+		    AudioManager.PlaySound(AudioManager.main.coin, 1);
 
         if (coins == 100)
         {
             coins = 0;
             AddLife();
         }
+        coinsScore.text = coins.ToString();
     }
 
     public void AddLife()
