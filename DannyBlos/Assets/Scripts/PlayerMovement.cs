@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         // perform jump
         if (Input.GetButtonDown("Jump"))
         {
+		    AudioManager.PlaySound(AudioManager.main.jump, 1);
             velocity.y = jumpForce;
             jumping = true;
         }

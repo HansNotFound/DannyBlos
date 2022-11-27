@@ -108,6 +108,8 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
+		    AudioManager.PlaySound(AudioManager.main.coin, 1);
+
         if (coins == 100)
         {
             coins = 0;

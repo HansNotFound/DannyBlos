@@ -13,6 +13,7 @@ public class Goomba : MonoBehaviour
             if (player.starpower) {
                 Hit();
             } else if (collision.transform.DotTest(transform, Vector2.down)) {
+		        AudioManager.PlaySound(AudioManager.main.goomba, 1);
                 Flatten();
             } else {
                 player.Hit();

@@ -33,10 +33,12 @@ public class PowerUp : MonoBehaviour
 
             case Type.MagicMushroom:
                 player.GetComponent<Player>().Grow();
+		        AudioManager.PlaySound(AudioManager.main.growup, 1);
                 break;
 
             case Type.Starpower:
                 player.GetComponent<Player>().Starpower();
+		        AudioManager.PlaySound(AudioManager.main.growup, 1);
                 break;
         }
 

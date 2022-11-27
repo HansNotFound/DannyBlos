@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
         smallRenderer.enabled = false;
         bigRenderer.enabled = false;
         deathAnimation.enabled = true;
+		Camera.main.GetComponent<AudioSource>().Stop();
+		AudioManager.PlaySound(AudioManager.main.death, 1);
 
         GameManager.Instance.ResetLevel(3f);
     }
