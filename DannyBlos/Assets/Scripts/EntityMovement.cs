@@ -5,15 +5,28 @@ using UnityEngine;
 public class EntityMovement : MonoBehaviour
 {
     public float speed = 1f;
-    public Vector2 direction = Vector2.left;
+    public float range;
+    private float distToPlayer;
 
+    public float shootingRange;
+    public GameObject bullet;
+    public GameObject bulletParent;
+
+    public float fireRate = 1f;
+    private float nextFireTime;
+    public Vector2 direction = Vector2.left;
+    public Transform player;
     private new Rigidbody2D rigidbody;
     private Vector2 velocity;
 
+    private bool mustPatrol;
+
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         rigidbody = GetComponent<Rigidbody2D>();
         enabled = false;
+        nextFireTime = Time.time;
     }
 
     private void OnBecameVisible()
@@ -61,6 +74,26 @@ public class EntityMovement : MonoBehaviour
         } else if (direction.x < 0f) {
             transform.localEulerAngles = Vector3.zero;
         }
+
+        distToPlayer = Vector2.Distance(transform.position, player.position);
+        Debug.Log(distToPlayer);
+        if (distToPlayer <= range && nextFireTime < Time.time) 
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.fixedDeltaTime);
+            Shoot();
+        }
     }
 
+    void Shoot()
+    {
+        Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+        nextFireTime = Time.time + fireRate;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
+        // Gizmos.DrawWireSphere(transform.position, shootingRange);
+    }
 }

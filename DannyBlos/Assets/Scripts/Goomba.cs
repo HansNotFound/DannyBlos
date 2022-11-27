@@ -27,7 +27,7 @@ public class Goomba : MonoBehaviour
         }
     }
 
-    private void Flatten()
+    public void Flatten()
     {
         GetComponent<Collider2D>().enabled = false;
         GetComponent<EntityMovement>().enabled = false;
@@ -36,7 +36,7 @@ public class Goomba : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
-    private void Hit()
+    public void Hit()
     {
         GetComponent<AnimatedSprite>().enabled = false;
         GetComponent<DeathAnimation>().enabled = true;
