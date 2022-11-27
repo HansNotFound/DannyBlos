@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,11 +11,19 @@ public class GameManager : MonoBehaviour
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
     public GameObject menuScreen;
+    public GameObject audioManager;
 
     public int world { get; private set; }
     public int stage { get; private set; }
     public int lives { get; private set; }
     public int coins { get; private set; }
+
+    public int health;
+    public int numOfHearts;
+
+    public GameObject[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
 
     private void Awake()
     {
@@ -48,7 +59,6 @@ public class GameManager : MonoBehaviour
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
 
-        lives = 3;
         coins = 0;
 
         LoadLevel(1, 1);
@@ -81,9 +91,9 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--;
+        UpdateLife();
 
-        if (lives > 0) {
+        if (health > 0) {
             LoadLevel(world, stage);
         } else {
             GameOver();
@@ -106,4 +116,21 @@ public class GameManager : MonoBehaviour
         lives++;
     }
 
+    public void UpdateLife(){
+
+        health-=1;
+
+        if(health > numOfHearts){
+            health = numOfHearts;
+        }
+
+        for ( int i = 0 ; i < numOfHearts; i++){
+
+            if(i < health){
+                hearts[i].GetComponent<Image>().sprite = fullHeart;
+            } else {
+                hearts[i].GetComponent<Image>().sprite = emptyHeart;
+            }
+        }
+    }
 }
