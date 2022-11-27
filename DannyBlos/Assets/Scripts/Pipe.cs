@@ -35,11 +35,13 @@ public class Pipe : MonoBehaviour
         {
             player.position = connection.position - exitDirection;
             yield return Move(player, connection.position + exitDirection, Vector3.one);
+		    AudioManager.PlaySound(AudioManager.main.pipe, 1);
         }
         else
         {
             player.position = connection.position;
             player.localScale = Vector3.one;
+		    AudioManager.PlaySound(AudioManager.main.pipe, 1);
         }
 
         player.GetComponent<PlayerMovement>().enabled = true;

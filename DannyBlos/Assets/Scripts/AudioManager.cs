@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour {
 	public GameObject prefab;
 	public AudioClip coin;
 	public AudioClip goomba;
+	public AudioClip koopa;
 	public AudioClip breakBlock;
 	public AudioClip pipe;
 	
@@ -17,6 +18,7 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip death;
 	public AudioClip flag;
 	public AudioClip win;
+	public AudioClip growup;
 	
 	public AudioClip beep;
 	public AudioClip bump;
