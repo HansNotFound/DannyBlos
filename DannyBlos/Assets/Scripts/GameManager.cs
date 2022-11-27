@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int coins { get; private set; }
 
+    public TMP_Text coinsScore;
+    public GameObject coinCanvas;
+
     private void Awake()
     {
         if (Instance != null) {
@@ -17,6 +21,7 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(coinCanvas);
         }
     }
 
@@ -30,8 +35,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-
         NewGame();
+        coinsScore.text = coins.ToString();
     }
 
     public void NewGame()
@@ -81,12 +86,14 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
-
+        coinsScore.text = coins.ToString();
         if (coins == 100)
         {
             coins = 0;
             AddLife();
         }
+        Debug.Log(coins);
+
     }
 
     public void AddLife()
