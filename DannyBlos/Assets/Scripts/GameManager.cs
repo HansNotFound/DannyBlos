@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
+    public GameObject menuScreen;
     public GameObject audioManager;
 
     public int world { get; private set; }
@@ -45,11 +46,17 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-        NewGame();
+        MenuScreen();
+    }
+
+    public void MenuScreen() 
+    {
+        menuScreen.gameObject.SetActive(true);
     }
 
     public void NewGame()
     {
+        menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
 
         coins = 0;
