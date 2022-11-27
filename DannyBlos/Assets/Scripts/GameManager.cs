@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
+    public GameObject audioManager;
 
     public int world { get; private set; }
     public int stage { get; private set; }
