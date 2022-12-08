@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     //Health Section
     public int health;
+    private int healthDefault;
     public int numOfHearts;
 
     public GameObject[] hearts;
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         coinsScore.text = coins.ToString();
         NewGame();
         MenuScreen();
+        Time.timeScale = 0f;
     }
 
     public void MenuScreen() 
@@ -68,9 +70,9 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
+        Time.timeScale = 1f;
         timeText.text = TimeLeft.ToString();
         TimerOn = true;
-
         coins = 0;
 
         LoadLevel(1, 1);
@@ -80,12 +82,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.gameObject.SetActive(true);
-        //NewGame();
     }
 
     public void LoadLevel(int world, int stage)
     {
-        this.world = world;
+          this.world = world;
         this.stage = stage;
         SceneManager.LoadScene($"{world}-{stage}");
     }
