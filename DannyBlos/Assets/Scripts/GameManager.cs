@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
     public GameObject menuScreen;
-    public GameObject audioManager;
 
     public int world { get; private set; }
     public int stage { get; private set; }
@@ -19,7 +18,6 @@ public class GameManager : MonoBehaviour
     public int coins { get; private set; }
 
     public TMP_Text coinsScore;
-    public GameObject coinCanvas;
     public int health;
     public int numOfHearts;
 
@@ -34,7 +32,6 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(coinCanvas);
             DontDestroyOnLoad(rootCanvas);
         }
     }
