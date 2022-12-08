@@ -17,7 +17,15 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int coins { get; private set; }
 
+    //Time Section
+    public TMP_Text timeText;
+    public float TimeLeft;
+    public bool TimerOn = false;
+
+    //Coin Section
     public TMP_Text coinsScore;
+
+    //Health Section
     public int health;
     public int numOfHearts;
 
@@ -46,8 +54,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-        NewGame();
         coinsScore.text = coins.ToString();
+        NewGame();
         MenuScreen();
     }
 
@@ -60,6 +68,8 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
+        timeText.text = TimeLeft.ToString();
+        TimerOn = true;
 
         coins = 0;
 
@@ -77,7 +87,6 @@ public class GameManager : MonoBehaviour
     {
         this.world = world;
         this.stage = stage;
-
         SceneManager.LoadScene($"{world}-{stage}");
     }
 
@@ -136,5 +145,21 @@ public class GameManager : MonoBehaviour
                 hearts[i].GetComponent<Image>().sprite = emptyHeart;
             }
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(TimerOn){
+            if(TimeLeft > 0){
+                TimeLeft -= Time.deltaTime;
+                string[] temp_text= TimeLeft.ToString().Split('.');
+                timeText.text = temp_text[0];
+                Debug.Log(TimeLeft);
+            } else {
+                GameOver();
+                TimerOn = false;
+            }
+        } 
     }
 }
