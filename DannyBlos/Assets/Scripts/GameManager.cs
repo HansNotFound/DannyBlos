@@ -68,12 +68,15 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
+
         Time.timeScale = 1f;
         timeText.text = TimeLeft.ToString();
         TimerOn = true;
+
         coins = 0;
         lives = 3;
-        TimeLeft = 400;
+        TimeLeft = 301;
+
         CheckLife();
         LoadLevel(1, 1);
         
@@ -116,7 +119,7 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
-		    AudioManager.PlaySound(AudioManager.main.coin, 1);
+		AudioManager.PlaySound(AudioManager.main.coin, 1);
 
         if (coins == 100)
         {
@@ -161,7 +164,6 @@ public class GameManager : MonoBehaviour
                 TimeLeft -= Time.deltaTime;
                 string[] temp_text= TimeLeft.ToString().Split('.');
                 timeText.text = temp_text[0];
-                Debug.Log(TimeLeft);
             } else {
                 GameOver();
                 TimerOn = false;
