@@ -11,16 +11,22 @@ public class GameManager : MonoBehaviour
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
     public GameObject menuScreen;
-    public GameObject audioManager;
 
     public int world { get; private set; }
     public int stage { get; private set; }
     public int lives { get; private set; }
     public int coins { get; private set; }
 
+    //Time Section
+    public TMP_Text timeText;
+    public float TimeLeft;
+    public bool TimerOn = false;
+
+    //Coin Section
     public TMP_Text coinsScore;
+
+    //Health Section
     public int health;
-    private int healthDefault;
     public int numOfHearts;
 
     public GameObject[] hearts;
@@ -49,8 +55,8 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         coinsScore.text = coins.ToString();
+        NewGame();
         MenuScreen();
-        Time.timeScale = 0f;
     }
 
     public void MenuScreen() 
@@ -62,7 +68,9 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
-        Time.timeScale = 1f;
+        timeText.text = TimeLeft.ToString();
+        TimerOn = true;
+
         coins = 0;
 
         LoadLevel(1, 1);
@@ -72,13 +80,13 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.gameObject.SetActive(true);
+        //NewGame();
     }
 
     public void LoadLevel(int world, int stage)
     {
-          this.world = world;
+        this.world = world;
         this.stage = stage;
-
         SceneManager.LoadScene($"{world}-{stage}");
     }
 
@@ -137,5 +145,21 @@ public class GameManager : MonoBehaviour
                 hearts[i].GetComponent<Image>().sprite = emptyHeart;
             }
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(TimerOn){
+            if(TimeLeft > 0){
+                TimeLeft -= Time.deltaTime;
+                string[] temp_text= TimeLeft.ToString().Split('.');
+                timeText.text = temp_text[0];
+                Debug.Log(TimeLeft);
+            } else {
+                GameOver();
+                TimerOn = false;
+            }
+        } 
     }
 }
