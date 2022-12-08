@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         NewGame();
         coinsScore.text = coins.ToString();
         MenuScreen();
+        Time.timeScale = 0f;
     }
 
     public void MenuScreen() 
@@ -67,9 +68,9 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
+        Time.timeScale = 1f;
         timeText.text = TimeLeft.ToString();
         TimerOn = true;
-
         coins = 0;
         lives = 3;
         TimeLeft = 400;
@@ -82,12 +83,11 @@ public class GameManager : MonoBehaviour
     {
         TimerOn = false;
         gameOverScreen.gameObject.SetActive(true);
-        //NewGame();
     }
 
     public void LoadLevel(int world, int stage)
     {
-        this.world = world;
+          this.world = world;
         this.stage = stage;
         SceneManager.LoadScene($"{world}-{stage}");
     }
