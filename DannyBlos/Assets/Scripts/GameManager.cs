@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public int coins { get; private set; }
 
     public TMP_Text coinsScore;
-    public GameObject coinCanvas;
     public int health;
+    private int healthDefault;
     public int numOfHearts;
 
     public GameObject[] hearts;
@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(coinCanvas);
             DontDestroyOnLoad(rootCanvas);
         }
     }
@@ -49,9 +48,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-        NewGame();
         coinsScore.text = coins.ToString();
         MenuScreen();
+        Time.timeScale = 0f;
     }
 
     public void MenuScreen() 
@@ -63,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
-
+        Time.timeScale = 1f;
         coins = 0;
 
         LoadLevel(1, 1);
@@ -73,12 +72,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.gameObject.SetActive(true);
-        //NewGame();
     }
 
     public void LoadLevel(int world, int stage)
     {
-        this.world = world;
+          this.world = world;
         this.stage = stage;
 
         SceneManager.LoadScene($"{world}-{stage}");
