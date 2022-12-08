@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text coinsScore;
 
     //Health Section
-    public int health;
-    private int healthDefault;
     public int numOfHearts;
 
     public GameObject[] hearts;
@@ -53,10 +51,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    {        
         Application.targetFrameRate = 60;
-        coinsScore.text = coins.ToString();
         NewGame();
+        coinsScore.text = coins.ToString();
         MenuScreen();
         Time.timeScale = 0f;
     }
@@ -74,13 +72,16 @@ public class GameManager : MonoBehaviour
         timeText.text = TimeLeft.ToString();
         TimerOn = true;
         coins = 0;
-
+        lives = 3;
+        TimeLeft = 400;
+        CheckLife();
         LoadLevel(1, 1);
         
     }
 
     public void GameOver()
     {
+        TimerOn = false;
         gameOverScreen.gameObject.SetActive(true);
     }
 
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateLife();
 
-        if (health > 0) {
+        if (lives > 0) {
             LoadLevel(world, stage);
         } else {
             GameOver();
@@ -132,15 +133,19 @@ public class GameManager : MonoBehaviour
 
     public void UpdateLife(){
 
-        health-=1;
+        lives-=1;
 
-        if(health > numOfHearts){
-            health = numOfHearts;
+        if(lives > numOfHearts){
+            lives = numOfHearts;
         }
-
+        
+        CheckLife();
+    }
+    
+    public void CheckLife(){
         for ( int i = 0 ; i < numOfHearts; i++){
 
-            if(i < health){
+            if(i < lives){
                 hearts[i].GetComponent<Image>().sprite = fullHeart;
             } else {
                 hearts[i].GetComponent<Image>().sprite = emptyHeart;
