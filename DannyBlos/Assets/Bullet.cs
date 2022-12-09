@@ -16,9 +16,13 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Goomba goomba = hitInfo.GetComponent<Goomba>();
+        Koopa koopa = hitInfo.GetComponent<Koopa>();
         if (goomba  != null) {
             goomba.Hit();
         }
+        // if (koopa != null) {
+        //     koopa.EnterShell();
+        // }
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

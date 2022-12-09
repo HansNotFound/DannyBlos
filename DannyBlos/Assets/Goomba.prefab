@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2269789486690213051}
   - component: {fileID: 302938324594504443}
   - component: {fileID: 3824220674154628880}
+  - component: {fileID: 2952489313708945441}
   - component: {fileID: 8509438838903832298}
   - component: {fileID: 6954345360587651489}
   m_Layer: 7
@@ -207,10 +208,23 @@ MonoBehaviour:
   speed: 2
   range: 10
   shootingRange: 6.5
-  bullet: {fileID: 0}
-  bulletParent: {fileID: 0}
+  fireRate: 1
   direction: {x: -1, y: 0}
   player: {fileID: 0}
+--- !u!114 &2952489313708945441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307845329230138590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84aa4afb0c897e4f9f5b347fae60c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  bulletPos: {fileID: 0}
 --- !u!114 &8509438838903832298
 MonoBehaviour:
   m_ObjectHideFlags: 0
