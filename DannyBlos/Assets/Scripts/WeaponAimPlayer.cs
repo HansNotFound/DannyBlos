@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using CodeMonkey.Utils;
 public class WeaponAimPlayer : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class WeaponAimPlayer : MonoBehaviour
 
     private bool isReloading = false;
     public int ammo = 5;
+    public TMP_Text ammoText;
+
     private void Awake()
-    {
+    {   
         aimTransform = transform.Find("Aim");
         aimAnimator = aimTransform.GetComponent<Animator>();
     }
@@ -58,6 +61,7 @@ public class WeaponAimPlayer : MonoBehaviour
 
     private void Shoot() {
         ammo--;
+        ammoText.text = ammo.ToString();
         nextFire =Time.time + fireRate;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }

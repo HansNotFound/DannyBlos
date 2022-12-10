@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(int world, int stage)
     {
-          this.world = world;
+        this.world = world;
         this.stage = stage;
         SceneManager.LoadScene($"{world}-{stage}");
     }
