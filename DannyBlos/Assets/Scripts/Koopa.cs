@@ -50,7 +50,7 @@ public class Koopa : MonoBehaviour
         }
     }
 
-    private void EnterShell()
+    public void EnterShell()
     {
         shelled = true;
 
