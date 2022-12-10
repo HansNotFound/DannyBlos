@@ -16,7 +16,9 @@ TagManager:
   - Ground
   - Enemy
   - EnemyBullet
-  - PlayerBullet
+  - PowerUp
+  - Shell
+  - 
   - 
   - 
   - 

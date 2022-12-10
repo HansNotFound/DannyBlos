@@ -1,14 +1,36 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public GameObject rootCanvas;
+    public GameObject gameOverScreen;
+    public GameObject menuScreen;
 
     public int world { get; private set; }
     public int stage { get; private set; }
     public int lives { get; private set; }
     public int coins { get; private set; }
+
+    //Time Section
+    public TMP_Text timeText;
+    public float TimeLeft;
+    public bool TimerOn = false;
+
+    //Coin Section
+    public TMP_Text coinsScore;
+
+    //Health Section
+    public int numOfHearts;
+
+    public GameObject[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
 
     private void Awake()
     {
@@ -17,6 +39,7 @@ public class GameManager : MonoBehaviour
         } else {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(rootCanvas);
         }
     }
 
@@ -28,32 +51,47 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    {        
         Application.targetFrameRate = 60;
-
         NewGame();
+        coinsScore.text = coins.ToString();
+        MenuScreen();
+        Time.timeScale = 0f;
+    }
+
+    public void MenuScreen() 
+    {
+        menuScreen.gameObject.SetActive(true);
     }
 
     public void NewGame()
     {
-        lives = 3;
-        coins = 0;
+        menuScreen.gameObject.SetActive(false);
+        gameOverScreen.gameObject.SetActive(false);
 
+        Time.timeScale = 1f;
+        timeText.text = TimeLeft.ToString();
+        TimerOn = true;
+
+        coins = 0;
+        lives = 3;
+        TimeLeft = 301;
+
+        CheckLife();
         LoadLevel(1, 1);
+        
     }
 
     public void GameOver()
     {
-        // TODO: show game over screen
-
-        NewGame();
+        TimerOn = false;
+        gameOverScreen.gameObject.SetActive(true);
     }
 
     public void LoadLevel(int world, int stage)
     {
-        this.world = world;
+          this.world = world;
         this.stage = stage;
-
         SceneManager.LoadScene($"{world}-{stage}");
     }
 
@@ -69,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--;
+        UpdateLife();
 
         if (lives > 0) {
             LoadLevel(world, stage);
@@ -81,12 +119,14 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
+		AudioManager.PlaySound(AudioManager.main.coin, 1);
 
         if (coins == 100)
         {
             coins = 0;
             AddLife();
         }
+        coinsScore.text = coins.ToString();
     }
 
     public void AddLife()
@@ -94,4 +134,40 @@ public class GameManager : MonoBehaviour
         lives++;
     }
 
+    public void UpdateLife(){
+
+        lives-=1;
+
+        if(lives > numOfHearts){
+            lives = numOfHearts;
+        }
+        
+        CheckLife();
+    }
+    
+    public void CheckLife(){
+        for ( int i = 0 ; i < numOfHearts; i++){
+
+            if(i < lives){
+                hearts[i].GetComponent<Image>().sprite = fullHeart;
+            } else {
+                hearts[i].GetComponent<Image>().sprite = emptyHeart;
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(TimerOn){
+            if(TimeLeft > 0){
+                TimeLeft -= Time.deltaTime;
+                string[] temp_text= TimeLeft.ToString().Split('.');
+                timeText.text = temp_text[0];
+            } else {
+                GameOver();
+                TimerOn = false;
+            }
+        } 
+    }
 }

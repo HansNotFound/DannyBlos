@@ -33,6 +33,8 @@ public class FlagPole : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         GameManager.Instance.LoadLevel(nextWorld, nextStage);
+		Camera.main.GetComponent<AudioSource>().Stop();
+		AudioManager.PlaySound(AudioManager.main.flag, 1);
     }
 
     private IEnumerator MoveTo(Transform subject, Vector3 position)
@@ -42,6 +44,7 @@ public class FlagPole : MonoBehaviour
             subject.position = Vector3.MoveTowards(subject.position, position, speed * Time.deltaTime);
             yield return null;
         }
+		AudioManager.PlaySound(AudioManager.main.win, 1);
 
         subject.position = position;
     }

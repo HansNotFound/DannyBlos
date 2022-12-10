@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: ce37a3c6cf3ff14439e8acb11aed1d55
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - prefab: {instanceID: 0}
+  - coin: {fileID: 8300000, guid: e3a428cbcca3a4eea80f28efad079778, type: 3}
+  - goomba: {instanceID: 0}
+  - koopa: {instanceID: 0}
+  - breakBlock: {instanceID: 0}
+  - pipe: {instanceID: 0}
+  - jump: {instanceID: 0}
+  - megaJump: {instanceID: 0}
+  - death: {instanceID: 0}
+  - flag: {instanceID: 0}
+  - win: {instanceID: 0}
+  - growup: {fileID: 8300000, guid: f009a9b58798fc14f895be171447cbbe, type: 3}
+  - beep: {fileID: 8300000, guid: a0b36352006764927b0bd2d81daa15ac, type: 3}
+  - bump: {fileID: 8300000, guid: 8c4927f1ead9e4d41ae5752f40e407d5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
