@@ -20,9 +20,6 @@ public class Bullet : MonoBehaviour
         if (goomba  != null) {
             goomba.Hit();
         }
-        // if (koopa != null) {
-        //     koopa.EnterShell();
-        // }
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
