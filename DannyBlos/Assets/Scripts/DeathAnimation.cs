@@ -44,7 +44,7 @@ public class DeathAnimation : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = true;
 
         PlayerMovement playerMovement = GetComponent<PlayerMovement>();
-        EntityMovement entityMovement = GetComponent<EntityMovement>();
+        EntityMovementKoopa entityMovement = GetComponent<EntityMovementKoopa>();
 
         if (playerMovement != null) {
             playerMovement.enabled = false;
