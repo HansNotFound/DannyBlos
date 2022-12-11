@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject rootCanvas;
     public GameObject gameOverScreen;
     public GameObject menuScreen;
+    public GameObject pauseScreen;
 
     public string difficulty { get; private set; }
     public int stage { get; private set; }
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     //Difficulty Button
     public Button EasyButton;
     public Button HardButton;
+
+    //Pause
+    public bool Pause = false;
 
     //Time Section
     public TMP_Text timeText;
@@ -69,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame(string dif)
     {
+        pauseScreen.gameObject.SetActive(false);
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
 
@@ -161,6 +166,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void QuitGame(){
+        Application.Quit();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -174,5 +183,17 @@ public class GameManager : MonoBehaviour
                 TimerOn = false;
             }
         } 
+
+        if (Input.GetKeyDown ("escape")) {
+            if(Pause == true){
+                Time.timeScale = 1.0f;
+                pauseScreen.gameObject.SetActive(false);
+                Pause = false;
+            } else {
+                Time.timeScale = 0.0f;
+                pauseScreen.gameObject.SetActive(true);
+                Pause = true;
+            }
+        }
     }
 }
