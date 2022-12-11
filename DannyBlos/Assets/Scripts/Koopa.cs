@@ -56,7 +56,7 @@ public class Koopa : MonoBehaviour
 
         GetComponent<SpriteRenderer>().sprite = shellSprite;
         GetComponent<AnimatedSprite>().enabled = false;
-        GetComponent<EntityMovement>().enabled = false;
+        GetComponent<EntityMovementKoopa>().enabled = false;
     }
 
     private void PushShell(Vector2 direction)
@@ -65,7 +65,7 @@ public class Koopa : MonoBehaviour
 
         GetComponent<Rigidbody2D>().isKinematic = false;
 
-        EntityMovement movement = GetComponent<EntityMovement>();
+        EntityMovementKoopa movement = GetComponent<EntityMovementKoopa>();
         movement.direction = direction.normalized;
         movement.speed = shellSpeed;
         movement.enabled = true;

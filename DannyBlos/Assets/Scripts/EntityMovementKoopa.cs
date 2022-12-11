@@ -67,21 +67,17 @@ public class EntityMovementKoopa : MonoBehaviour
             transform.localEulerAngles = Vector3.zero;
         }
 
-        Vector3 scale = transform.localScale;
+        Vector3 scale = transform.localScale;;
 
-        distToPlayer = Vector2.Distance(transform.position, player.position);
-        
-        if (distToPlayer <= range) 
+        if(player.transform.position.x > transform.position.x) 
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.fixedDeltaTime);
-            if(player.transform.position.x > transform.position.x) 
-            {
-                scale.x = Mathf.Abs(scale.x)*-1 * (flip ? -1 : 1);
-            } else {
-                scale.x = Mathf.Abs(scale.x) * (flip ? -1 : 1);
-            }
-            transform.localScale = scale;
+            scale.x = Mathf.Abs(scale.x)*-1 * (flip ? -1 : 1);
+            transform.Translate(speed * Time.deltaTime, y:0, z:0);
+        } else {
+            scale.x = Mathf.Abs(scale.x) * (flip ? -1 : 1);
+            transform.Translate(speed * Time.deltaTime * -1, y:0, z:0);
         }
+        transform.localScale = scale;
     
     }
 
