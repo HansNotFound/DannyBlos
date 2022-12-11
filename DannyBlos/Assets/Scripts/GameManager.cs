@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
     {
         this.difficulty = difficulty;
         this.stage = stage;
+        int y = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.UnloadSceneAsync(y);
         SceneManager.LoadScene($"{difficulty}-{stage}");
     }
 
