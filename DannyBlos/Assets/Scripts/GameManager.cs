@@ -12,10 +12,14 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject menuScreen;
 
-    public int world { get; private set; }
+    public string difficulty { get; private set; }
     public int stage { get; private set; }
     public int lives { get; private set; }
     public int coins { get; private set; }
+
+    //Difficulty Button
+    public Button EasyButton;
+    public Button HardButton;
 
     //Time Section
     public TMP_Text timeText;
@@ -53,7 +57,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {        
         Application.targetFrameRate = 60;
-        NewGame();
         coinsScore.text = coins.ToString();
         MenuScreen();
         Time.timeScale = 0f;
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
         menuScreen.gameObject.SetActive(true);
     }
 
-    public void NewGame()
+    public void NewGame(string dif)
     {
         menuScreen.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(false);
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour
         TimeLeft = 301;
 
         CheckLife();
-        LoadLevel(1, 1);
+        LoadLevel(dif, 1);
         
     }
 
@@ -88,16 +91,16 @@ public class GameManager : MonoBehaviour
         gameOverScreen.gameObject.SetActive(true);
     }
 
-    public void LoadLevel(int world, int stage)
+    public void LoadLevel(string difficulty, int stage)
     {
-        this.world = world;
+        this.difficulty = difficulty;
         this.stage = stage;
-        SceneManager.LoadScene($"{world}-{stage}");
+        SceneManager.LoadScene($"{difficulty}-{stage}");
     }
 
     public void NextLevel()
     {
-        LoadLevel(world, stage + 1);
+        LoadLevel(difficulty, stage + 1);
     }
 
     public void ResetLevel(float delay)
@@ -110,7 +113,7 @@ public class GameManager : MonoBehaviour
         UpdateLife();
 
         if (lives > 0) {
-            LoadLevel(world, stage);
+            LoadLevel(difficulty, stage);
         } else {
             GameOver();
         }

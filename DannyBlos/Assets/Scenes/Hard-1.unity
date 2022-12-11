@@ -5131,6 +5131,8 @@ MonoBehaviour:
   rootCanvas: {fileID: 447475422}
   gameOverScreen: {fileID: 110890329}
   menuScreen: {fileID: 1785295036}
+  EasyButton: {fileID: 550486741}
+  HardButton: {fileID: 1834334351}
   timeText: {fileID: 50469292}
   TimeLeft: 300
   TimerOn: 0
