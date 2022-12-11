@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4953937513092463114}
   - component: {fileID: 2262214753697499689}
   - component: {fileID: 3476804150155684021}
+  - component: {fileID: 599446293002786707}
   - component: {fileID: 1326665629888359022}
-  - component: {fileID: 658345861707695150}
   - component: {fileID: 4036622396060348869}
   - component: {fileID: 8863421987694266431}
   - component: {fileID: 7896048874926067572}
@@ -128,6 +128,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &599446293002786707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4953937513092463115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c03a1b0bb5d0f42a6238bdfb5bdf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flatSprite: {fileID: 21300000, guid: dceda839fbcc74441aef5f93f32bdc1a, type: 3}
 --- !u!114 &1326665629888359022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,25 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flatSprite: {fileID: 21300000, guid: dceda839fbcc74441aef5f93f32bdc1a, type: 3}
---- !u!114 &658345861707695150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4953937513092463115}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b323ac5030b21014c9f28b9d9b6e4bdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 2
-  isPatrol: 0
-  rb: {fileID: 2262214753697499689}
-  groundCheckPos: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &4036622396060348869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 2
+  shootingRange: 0
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  fireRate: 1
   direction: {x: -1, y: 0}
   player: {fileID: 0}
 --- !u!114 &8863421987694266431
