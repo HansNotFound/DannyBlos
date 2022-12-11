@@ -277,7 +277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (3)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -1687,11 +1687,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1735,10 +1735,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (7)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &109502314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 109502313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &110890329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +1882,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (2)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -2342,11 +2347,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2390,10 +2395,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (5)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &167569622 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 167569621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &168014596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3289,7 +3299,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1035231141049816882, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_Name
-      value: Cloud3 (4)
+      value: Cloud3
       objectReference: {fileID: 0}
     - target: {fileID: 8150361788633858316, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_RootOrder
@@ -3530,7 +3540,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (1)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -3663,7 +3673,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 959231844175687805, guid: 110c2f3946049df40861b9180bd81f77, type: 3}
       propertyPath: m_Name
-      value: Bush1 (1)
+      value: Bush1
       objectReference: {fileID: 0}
     - target: {fileID: 5569433547154846709, guid: 110c2f3946049df40861b9180bd81f77, type: 3}
       propertyPath: m_RootOrder
@@ -3984,7 +3994,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (6)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -4037,11 +4047,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4085,10 +4095,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (3)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &367240599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 367240598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &374665862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8150361788633858316, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
@@ -4737,11 +4752,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4785,10 +4800,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (6)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &417639876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 417639875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &425747674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4842,7 +4862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (9)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -7201,7 +7221,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (4)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -7889,11 +7909,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7937,10 +7957,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (4)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &632183774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 632183773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &634410679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8563,11 +8588,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457604432}
     m_Modifications:
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8611,10 +8636,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (2)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+--- !u!4 &676628573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2809005996052281199, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
+  m_PrefabInstance: {fileID: 676628572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &686117495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9071,7 +9101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1035231141049816882, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_Name
-      value: Cloud3 (1)
+      value: Cloud3
       objectReference: {fileID: 0}
     - target: {fileID: 8150361788633858316, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_RootOrder
@@ -11140,6 +11170,7 @@ Transform:
   - {fileID: 505103770}
   - {fileID: 167202417}
   - {fileID: 1718653151}
+  - {fileID: 1616479468}
   m_Father: {fileID: 847584414}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13627,7 +13658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (3)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -14170,7 +14201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (3)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
@@ -14901,7 +14932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (6)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -15782,7 +15813,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
-      value: Cloud2 (5)
+      value: Cloud2
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
@@ -17146,6 +17177,12 @@ Transform:
   - {fileID: 1099578229}
   - {fileID: 1024953448}
   - {fileID: 113933437}
+  - {fileID: 676628573}
+  - {fileID: 367240599}
+  - {fileID: 632183774}
+  - {fileID: 167569622}
+  - {fileID: 417639876}
+  - {fileID: 109502314}
   m_Father: {fileID: 847584414}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17243,7 +17280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (2)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
@@ -18938,7 +18975,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 872465901}
     m_Modifications:
     - target: {fileID: 5127198269073963386, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_Name
@@ -18946,7 +18983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18990,6 +19027,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
+--- !u!4 &1616479468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5385464301331862275, guid: cad0b8ed4edee4f40babd548d878b1b9, type: 3}
+  m_PrefabInstance: {fileID: 1616479467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1622166663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3249715635291859842, guid: e62038c0504cf124bb51628b480df8f0, type: 3}
@@ -19678,7 +19720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876590276154681298, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
       propertyPath: m_Name
-      value: Bush2 (1)
+      value: Bush2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca36628c8ec9d2d47828f36a5405ae4e, type: 3}
@@ -20316,7 +20358,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1035231141049816882, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_Name
-      value: Cloud3 (3)
+      value: Cloud3
       objectReference: {fileID: 0}
     - target: {fileID: 8150361788633858316, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_RootOrder
@@ -20569,7 +20611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (1)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -21010,7 +21052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (5)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -22375,7 +22417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (4)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -23415,7 +23457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1035231141049816882, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_Name
-      value: Cloud3 (2)
+      value: Cloud3
       objectReference: {fileID: 0}
     - target: {fileID: 8150361788633858316, guid: 2f5de5a0734d0804fba7b30c7e01d44c, type: 3}
       propertyPath: m_RootOrder
@@ -24907,7 +24949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (2)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -25632,7 +25674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (8)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
@@ -25884,7 +25926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740704825481963495, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
       propertyPath: m_Name
-      value: Cloud1 (7)
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c167cf4985223a4e9723350f7bc0be4, type: 3}
